@@ -6,7 +6,7 @@
 /*   By: jhusso <jhusso@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/17 15:05:24 by jhusso            #+#    #+#             */
-/*   Updated: 2023/09/04 10:07:59 by jhusso           ###   ########.fr       */
+/*   Updated: 2023/09/12 15:15:51 by jhusso           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,11 @@ void	set_hooks(t_mlx *mlx)
 	// mlx_hook(mlx->win_ptr, 06, 1, &mouse_params, &mlx);
 }
 
+// void	init_mlx(t_mlx *mlx)
+// {
+
+// }
+
 int	main(int ac, char *av[])
 {
 	t_mlx	mlx;
@@ -45,6 +50,7 @@ int	main(int ac, char *av[])
 	mlx.mlx_ptr = mlx_init();
 	if (!mlx.mlx_ptr)
 		return (1);
+	// init_mlx(&mlx);
 	mlx.win_ptr = mlx_new_window(mlx.mlx_ptr, WIN_W, WIN_H, "play");
 	if (mlx.win_ptr == NULL)
 		destroy_flag(&mlx, 1);
